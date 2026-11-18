@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Download the official KamHub Android application.">
 
   <title>Download KamHub</title>
 
@@ -15,15 +17,15 @@
     html, body {
       margin: 0;
       width: 100%;
-      min-height: 100%;
+      height: 100%;
       font-family: Arial, sans-serif;
     }
 
     body {
       min-height: 100vh;
       min-height: 100dvh;
-      background: linear-gradient(145deg, #0f172a, #14532d);
-      color: white;
+      background: linear-gradient(145deg, #334155, #0f172a);
+      color: #ffffff;
 
       display: flex;
       align-items: center;
@@ -37,13 +39,12 @@
       width: 100%;
       max-width: 380px;
       text-align: center;
-
-      padding: 30px 22px;
+      padding: 32px 22px;
       border-radius: 22px;
 
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
     }
 
     .logo {
@@ -51,49 +52,58 @@
       height: 76px;
       margin: 0 auto 18px;
 
-      background: #22c55e;
+      background: #475569;
+      border: 1px solid #64748b;
       border-radius: 20px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      font-size: 36px;
+      font-size: 38px;
       font-weight: bold;
-      color: #052e16;
+      color: #ff9800;
     }
 
     h1 {
-      font-size: 32px;
-      margin: 0 0 10px;
+      font-size: 36px;
+      margin: 0 0 12px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .kam {
+      color: #ffffff;
+    }
+
+    .hub {
+      color: #ff9800;
     }
 
     .subtitle {
       font-size: 14px;
-      line-height: 1.6;
-      color: #d1fae5;
-      margin: 0 0 25px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin: 0 0 26px;
     }
 
     .download-btn {
       display: block;
       width: 100%;
-
       padding: 16px;
-      border-radius: 12px;
 
-      background: #22c55e;
-      color: #052e16;
+      border-radius: 12px;
+      background: #ff9800;
+      color: #0f172a;
 
       text-decoration: none;
       font-size: 17px;
       font-weight: bold;
-
       transition: background 0.2s;
     }
 
     .download-btn:active {
-      background: #16a34a;
+      background: #fb8c00;
     }
 
     .info {
@@ -104,10 +114,9 @@
 
     .privacy {
       display: inline-block;
-      margin-top: 25px;
-
+      margin-top: 24px;
       font-size: 13px;
-      color: #bbf7d0;
+      color: #e2e8f0;
       text-decoration: underline;
     }
 
@@ -123,7 +132,7 @@
       }
 
       h1 {
-        font-size: 25px;
+        font-size: 27px;
       }
 
       .subtitle {
@@ -143,7 +152,9 @@
 
     <div class="logo">K</div>
 
-    <h1>KamHub</h1>
+    <h1>
+      <span class="kam">Kam</span><span class="hub">Hub</span>
+    </h1>
 
     <p class="subtitle">
       Your everyday management tools,
@@ -152,8 +163,7 @@
 
     <a
       class="download-btn"
-      href="#"
-      id="downloadButton"
+      href="https://github.com/kamhub-app/kamhub-privacy/releases/latest/download/KamHub-Signed.apk"
     >
       ⬇ Download KamHub
     </a>
@@ -167,22 +177,6 @@
     </a>
 
   </main>
-
-  <script>
-    const apkUrl = "";
-
-    document.getElementById("downloadButton")
-      .addEventListener("click", function(event) {
-
-        if (!apkUrl) {
-          event.preventDefault();
-          alert("Download link is being prepared.");
-          return;
-        }
-
-        this.href = apkUrl;
-      });
-  </script>
 
 </body>
 </html>
