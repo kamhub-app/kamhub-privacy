@@ -4,73 +4,190 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Privacy Policy for KamHub Android App">
+  <meta name="theme-color" content="#1e293b">
   <title>Privacy Policy | KamHub</title>
 
   <style>
+    :root {
+      --bg: #0f172a;
+      --slate: #1e293b;
+      --card: #263449;
+      --border: #475569;
+      --text: #f1f5f9;
+      --muted: #cbd5e1;
+      --orange: #ff9800;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background: #f3f6fb;
-      color: #253247;
+      background: linear-gradient(145deg, #334155, #0f172a);
+      background-attachment: fixed;
+      color: var(--text);
       font-family: Arial, sans-serif;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
     header {
-      background: linear-gradient(135deg, #123b70, #187a91);
-      color: white;
+      background: rgba(15, 23, 42, 0.65);
+      border-bottom: 1px solid var(--border);
       text-align: center;
-      padding: 42px 20px;
+      padding: 42px 20px 34px;
     }
 
-    header h1 {
+    .brand {
       margin: 0;
-      font-size: 32px;
+      font-size: clamp(36px, 9vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.2;
     }
 
-    header p {
-      margin-top: 8px;
-      opacity: 0.9;
+    .kam {
+      color: #ffffff;
+    }
+
+    .hub {
+      color: var(--orange);
+    }
+
+    .page-title {
+      margin: 12px 0 4px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 13px 26px;
+      background: var(--orange);
+      color: #0f172a;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(255, 152, 0, 0.18);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .download-btn:hover {
+      background: #ffad33;
+      transform: translateY(-2px);
+    }
+
+    .download-btn:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 4px;
     }
 
     main {
-      max-width: 850px;
-      margin: 25px auto;
-      padding: 0 15px;
+      width: min(100% - 30px, 850px);
+      margin: 28px auto;
+    }
+
+    .intro {
+      margin-bottom: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     section {
-      background: white;
-      padding: 24px;
-      margin-bottom: 18px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      background: rgba(38, 52, 73, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 25px;
+      margin-bottom: 16px;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
     }
 
     h2 {
-      color: #145a88;
-      font-size: 20px;
-      margin-top: 0;
+      color: var(--orange);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 0 0 14px;
     }
 
     p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    p:last-child {
       margin-bottom: 0;
     }
 
     a {
-      color: #126ca3;
+      color: #ffbd59;
       overflow-wrap: anywhere;
+    }
+
+    strong {
+      color: var(--text);
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      color: #637184;
-      font-size: 14px;
+      padding: 20px 15px 32px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 32px 16px 28px;
+      }
+
+      main {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+      }
+
+      section {
+        padding: 20px 17px;
+        border-radius: 14px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .download-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .download-btn {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -78,177 +195,189 @@
 <body>
 
 <header>
-  <h1>KamHub</h1>
-  <p>Privacy Policy</p>
-  <p>Last Updated: 18 November 2026</p>
+  <h1 class="brand">
+    <span class="kam">Kam</span><span class="hub">Hub</span>
+  </h1>
+
+  <p class="page-title">Privacy Policy</p>
+  <p class="updated">Last Updated: 18 November 2026</p>
+
+  <a class="download-btn" href="./download.html">
+    ⬇ Download KamHub
+  </a>
 </header>
 
 <main>
 
-<section>
-  <h2>1. About KamHub</h2>
-  <p>
-    KamHub is an Android workspace for school management,
-    property rent management, booking slips, business and
-    cash books, and document editing.
-  </p>
-  <p>
-    The app can store information entered by users,
-    including names, contact details, student records,
-    tenant information, booking details, financial
-    transactions, and documents.
-  </p>
-</section>
-
-<section>
-  <h2>2. Information Stored on Your Device</h2>
-  <p>
-    KamHub stores the records and files you create or
-    import on your device.
-  </p>
-  <p>
-    This information may include personal and financial
-    details about other people. Users are responsible
-    for obtaining appropriate permission to record
-    and share this information.
-  </p>
-</section>
-
-<section>
-  <h2>3. Local Network Features</h2>
-  <p>
-    Some School Management features support
-    device-to-device transfers over a local Wi-Fi network.
-  </p>
-  <p>
-    When these features are used, selected school
-    information may be transferred to another device
-    on that network.
-  </p>
-  <p>
-    KamHub requests Internet and Wi-Fi state permissions
-    to support networking features. These permissions
-    do not by themselves mean that information is
-    uploaded to a KamHub cloud server.
-  </p>
-</section>
-
-<section>
-  <h2>4. Exports, Sharing, and Backups</h2>
-  <p>
-    Users may choose to export, print, share, back up,
-    restore, or transfer information.
-  </p>
-  <p>
-    When information is shared or exported, the selected
-    files or records may be handled by another app,
-    storage provider, or device.
-  </p>
-  <p>
-    Those destinations may have their own privacy
-    practices. Users should keep backups and exported
-    documents secure.
-  </p>
-</section>
-
-<section>
-  <h2>5. Data Use and Disclosure</h2>
-  <p>
-    KamHub uses entered information to provide
-    management, calculations, reporting, document
-    creation, and transfer features requested by users.
-  </p>
-  <p>
-    Information may leave the device when users
-    initiate sharing, exporting, backup, or
-    local-network transfers.
-  </p>
-  <p>
-    No advertising or analytics service was identified
-    in the reviewed app source. The final published
-    version and any added third-party components
-    must be checked for changes to data practices.
-  </p>
-</section>
-
-<section>
-  <h2>6. Data Retention and Deletion</h2>
-  <p>
-    Records remain in the app until users edit or delete
-    them through available features, clear app data,
-    or uninstall the application.
-  </p>
-  <p>
-    Previously exported, shared, or backed-up copies
-    are not automatically deleted when a record is
-    removed from the app.
-  </p>
-  <p>
-    Uninstalling the app may remove locally stored
-    information. Users should preserve a backup
-    beforehand if necessary.
-  </p>
-</section>
-
-<section>
-  <h2>7. Data Security</h2>
-  <p>
-    KamHub uses device storage and includes
-    backup protection features.
-  </p>
-  <p>
-    No software can guarantee absolute security.
-    Users should protect their devices, backups,
-    credentials, and shared files.
-  </p>
-</section>
-
-<section>
-  <h2>8. Children's Information</h2>
-  <p>
-    School administrators may enter student records,
-    including information about minors, for
-    school management purposes.
-  </p>
-  <p>
-    Authorized users should have an appropriate basis
-    to process these records and should not share
-    student information without authorization.
-  </p>
-  <p>
-    KamHub is a management application and is not
-    marketed directly to children.
-  </p>
-</section>
-
-<section>
-  <h2>9. Changes to This Policy</h2>
-  <p>
-    This Privacy Policy may be updated when KamHub's
-    features or data practices change.
-  </p>
-  <p>
-    Updated information will be made available
-    through this webpage and, where applicable,
-    within the application.
-  </p>
-</section>
-
-<section>
-  <h2>10. Contact Us</h2>
-  <p>
-    For questions or concerns regarding this
-    Privacy Policy, please contact:
+  <p class="intro">
+    Please read this Privacy Policy to understand
+    how KamHub handles information used within the app.
   </p>
 
-  <p>
-    <strong>App:</strong> KamHub<br>
-    <strong>Email:</strong>
-    <a href="mailto:kaaamhubb@gmail.com">
-      kaaamhubb@gmail.com
-    </a>
-  </p>
-</section>
+  <section>
+    <h2>1. About KamHub</h2>
+    <p>
+      KamHub is an Android workspace for school management,
+      property rent management, booking slips, business and
+      cash books, and document editing.
+    </p>
+    <p>
+      The app can store information entered by users,
+      including names, contact details, student records,
+      tenant information, booking details, financial
+      transactions, and documents.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Information Stored on Your Device</h2>
+    <p>
+      KamHub stores the records and files you create or
+      import on your device.
+    </p>
+    <p>
+      This information may include personal and financial
+      details about other people. Users are responsible
+      for obtaining appropriate permission to record
+      and share this information.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Local Network Features</h2>
+    <p>
+      Some School Management features support
+      device-to-device transfers over a local Wi-Fi network.
+    </p>
+    <p>
+      When these features are used, selected school
+      information may be transferred to another device
+      on that network.
+    </p>
+    <p>
+      KamHub requests Internet and Wi-Fi state permissions
+      to support networking features. These permissions
+      do not by themselves mean that information is
+      uploaded to a KamHub cloud server.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Exports, Sharing, and Backups</h2>
+    <p>
+      Users may choose to export, print, share, back up,
+      restore, or transfer information.
+    </p>
+    <p>
+      When information is shared or exported, the selected
+      files or records may be handled by another app,
+      storage provider, or device.
+    </p>
+    <p>
+      Those destinations may have their own privacy
+      practices. Users should keep backups and exported
+      documents secure.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Data Use and Disclosure</h2>
+    <p>
+      KamHub uses entered information to provide
+      management, calculations, reporting, document
+      creation, and transfer features requested by users.
+    </p>
+    <p>
+      Information may leave the device when users
+      initiate sharing, exporting, backup, or
+      local-network transfers.
+    </p>
+    <p>
+      No advertising or analytics service was identified
+      in the reviewed app source. The final published
+      version and any added third-party components
+      must be checked for changes to data practices.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Data Retention and Deletion</h2>
+    <p>
+      Records remain in the app until users edit or delete
+      them through available features, clear app data,
+      or uninstall the application.
+    </p>
+    <p>
+      Previously exported, shared, or backed-up copies
+      are not automatically deleted when a record is
+      removed from the app.
+    </p>
+    <p>
+      Uninstalling the app may remove locally stored
+      information. Users should preserve a backup
+      beforehand if necessary.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Data Security</h2>
+    <p>
+      KamHub uses device storage and includes
+      backup protection features.
+    </p>
+    <p>
+      No software can guarantee absolute security.
+      Users should protect their devices, backups,
+      credentials, and shared files.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Children's Information</h2>
+    <p>
+      School administrators may enter student records,
+      including information about minors, for
+      school management purposes.
+    </p>
+    <p>
+      Authorized users should have an appropriate basis
+      to process these records and should not share
+      student information without authorization.
+    </p>
+    <p>
+      KamHub is a management application and is not
+      marketed directly to children.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      This Privacy Policy may be updated when KamHub's
+      features or data practices change.
+    </p>
+    <p>
+      Updated information will be made available
+      through this webpage and, where applicable,
+      within the application.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Contact Us</h2>
+    <p>
+      For questions or concerns regarding this
+      Privacy Policy, please contact:
+    </p>
+
+    <p>
+      <strong>App:</strong> KamHub<br>
+      <strong>Email:</strong>
+      <a href="mailto:kaaamhubb@gmail.com">
+        kaaamhubb@gmail.com
+      </a>
+    </p>
+  </section>
 
 </main>
 
